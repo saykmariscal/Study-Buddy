@@ -3,12 +3,7 @@ package com.example.mariscal_studybuddy;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -30,6 +25,18 @@ public class Home_Page extends AppCompatActivity {
 
         binding.listBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, Study_List.class);
+            startActivity(intent);
+
+        });
+
+        binding.alertBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Notifications.class);
+            startActivity(intent);
+
+        });
+
+        binding.moreBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Settings.class);
             startActivity(intent);
 
         });
